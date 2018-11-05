@@ -5,7 +5,9 @@ One Paragraph of project description goes here. Change done.
 * first bullet point
 * second bullet point
 
-[image 1]: ./images/image1.jpg
+[image1]: ./images/image1.jpg
+
+this is the first image ![alt text][image1]
 
 ## Getting Started
 
