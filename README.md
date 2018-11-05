@@ -7,7 +7,9 @@ One Paragraph of project description goes here. Change done.
 
 [image1]: ./images/image1.jpg
 
-this is the first image ![alt text][image1]
+this is the first image
+
+![alt text][image1]
 
 ## Getting Started
 
