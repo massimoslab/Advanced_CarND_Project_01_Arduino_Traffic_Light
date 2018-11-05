@@ -1,4 +1,4 @@
-# Project Title
+# Project 01 : Arduino Traffic Light
 
 One Paragraph of project description goes here. Change done.
 
