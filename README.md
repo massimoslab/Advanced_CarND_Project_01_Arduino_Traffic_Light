@@ -1,96 +1,87 @@
+[image1]: ./images/traffic_light.png
+
 # Project 01 : Arduino Traffic Light
 
-One Paragraph of project description goes here. Change done.
+In this project we will build a traffic light with an Arduino Nano. The lights will change from green to amber and finally to red with random time intervals.
 
-* first bullet point
-* second bullet point
+The traffic light will be useful to simulate real driving conditions. In Project 02, we will then program the self driving car to recognize the colours and control speed accordingly.
 
-[image1]: ./images/image1.jpg
+## 01. Project assembly
 
-this is the first image
+To begin, wire and assemble the project according to the following diagram:
 
 ![alt text][image1]
 
-## Getting Started
+Please notice that the 3-colour leds should be facing down. Therefore the wire colours do no correspond to the correct pins of the 3-colour leds. Remember to flip the 3-colour leds before connecting the batteries.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## 02. Arduino code
 
-### Prerequisites
-
-What things you need to install the software and how to install them
+Below is the code that you have to upload into the Arduino Nano:
 
 ```
-Give examples
+#define redPin 2
+#define ambPin 3
+#define grnPin 4
+
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(ambPin, OUTPUT);
+  pinMode(grnPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(redPin, HIGH);
+  delay(random(10000, 30000));
+  digitalWrite(redPin, LOW);
+
+  digitalWrite(ambPin, HIGH);
+  delay(4000);
+  digitalWrite(ambPin, LOW);
+
+  digitalWrite(grnPin, HIGH);
+  delay(random(10000, 30000));
+  digitalWrite(grnPin, LOW);
+}
 ```
 
-### Installing
+#### Understanding the code
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+We first define the pins that will be used for the red, amber and green light:
 
 ```
-Give the example
+#define redPin 2
+#define ambPin 3
+#define grnPin 4
 ```
 
-And repeat
+We then initialize our variables:
 
 ```
-until finished
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(ambPin, OUTPUT);
+  pinMode(grnPin, OUTPUT);
+}
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Finally we loop through the leds with random time delays:
 
 ```
-Give an example
+void loop() {
+  digitalWrite(redPin, HIGH);
+  delay(random(10000, 30000));
+  digitalWrite(redPin, LOW);
+
+  digitalWrite(ambPin, HIGH);
+  delay(4000);
+  digitalWrite(ambPin, LOW);
+
+  digitalWrite(grnPin, HIGH);
+  delay(random(10000, 30000));
+  digitalWrite(grnPin, LOW);
+}
 ```
 
-### And coding style tests
+## 03. Upload sketch
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Connect the Arduino Nano to your laptop and upload the sketch code.
