@@ -1,4 +1,4 @@
-[image1]: ./images/traffic_light.png
+[image1]: ./images/traffic_lights.jpg
 
 # Project 01 : Arduino Traffic Light
 
