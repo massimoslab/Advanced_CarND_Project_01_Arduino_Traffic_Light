@@ -85,3 +85,11 @@ void loop() {
 ## 03. Upload sketch
 
 Connect the Arduino Nano to your laptop and upload the sketch code.
+
+## Authors
+
+**Massimo Passamonti**: [email me](mailto:mpweb2.0@gmail.com)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
