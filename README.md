@@ -86,10 +86,10 @@ void loop() {
 
 Connect the Arduino Nano to your laptop and upload the sketch code.
 
-## Authors
+## Author
 
 **Massimo Passamonti**: [email me](mailto:mpweb2.0@gmail.com)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project and its source code are licensed under the MIT License. [See MIT License](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md) file for details.
